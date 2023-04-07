@@ -1,5 +1,5 @@
-CSV_file.csv
-dir_01
-test_file_01.py
-test_file_02.txt
-zapis.json
+('CSV_file.csv', '20 Bajtow')
+('dir_01', '0 Bajtow')
+('test_file_01.py', '21 Bajtow')
+('test_file_02.txt', '159 Bajtow')
+('zapis.json', '69 Bajtow')

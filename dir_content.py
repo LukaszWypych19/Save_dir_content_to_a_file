@@ -20,29 +20,41 @@ import os
 
 print(os.getcwd())
 
-                    # podajemy sciezke do katalogu z ktorego chcemy pobrac nazwy pliow / katalogow
+# podajemy sciezke do katalogu z ktorego chcemy pobrac nazwy pliow / katalogow
 os.chdir('D:\\Python\\Moje projekty\\Dir_content_in_file\\test_dir')
 print(os.getcwd())
 
-                    # printujemy liste plikow i/lub katalogow w danej lokalizacji
+# printujemy liste plikow i/lub katalogow w danej lokalizacji
 list_of_files = os.listdir()
 print(list_of_files)
 
-            # tworzymy liste rozmiarow dla poszczegolnych plikow
+# tworzymy liste rozmiarow dla poszczegolnych plikow
 size_list = []
 for i in list_of_files:
     size = (os.path.getsize(i))
-    size_list.append(size)
+    size_list.append(f'{size} Bajtow')
 print(size_list)
 
+stats = list(zip(list_of_files, size_list))
+print(stats)
 
-                       #podajemy sciezke gdzie ma sie zapisac plik z nazwami plikow / katalogow
+
+# keys = list_of_files
+# values = size_list
+# slownik = {}
+# for keys, values in slownik.items():
+#     slownik.update(iter())
+# print(slownik)
+
+
+
+# podajemy sciezke gdzie ma sie zapisac plik z nazwami plikow / katalogow
 
 plik = open("D:\\Python\\Moje projekty\\Dir_content_in_file\\test_dir\\test_file_02.txt", 'w+')
 
-                        # zapisuje w pliku elementy listy jeden pod drugim
-for i in list_of_files:
-    plik.write(i + "\n")
+# zapisuje w pliku elementy listy jeden pod drugim
+for i in stats:
+    plik.write(str(i) + '\n')
 
 plik.close()
 
