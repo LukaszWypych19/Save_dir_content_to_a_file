@@ -1,4 +1,4 @@
-import os
+import os, time
 
 #                     wyswietla sciezke katalogu w ktorym jestesmy
 
@@ -32,21 +32,29 @@ list_of_files = os.listdir()
 
 # tworzymy liste rozmiarow plikow dla poszczegolnych nazw plikow z listy list_of_files
 # zamieniamy elementy takiej listy na str i dodajemy slowo "Bajtow"
-size_list = []
+
 # for i in list_of_files:
 #     size = (os.path.getsize(i))
 #     size_list.append(f' Wielkosc pliku: {size} Bajtow')
 # print(size_list)
+
+size_list = []
 for i in list_of_files:
     size_list.append(f'Wielkosc pliku: {os.path.getsize(i)} Bajtow')
-# print(size_list)
+print(size_list)
 
+create_time_list = []
+for i in list_of_files:
+    create_time_list.append(f'Data utworzenia pliku: {time.ctime(os.path.getctime(i))}')
+print(create_time_list)
 # łączymy dwie listy: liste nazw plikow i liste rozmiarow tych plikow
 # w sposob naprzemienny (metoda ZIP) tzn. pierwszy element z listy 'list_of_files'
 # z pierwszym elementem listy 'size_list' itd. --> wynik to lista tupli
 
-stats = list(zip(list_of_files, size_list))
-print(stats)
+stats = list(zip(list_of_files, size_list, create_time_list))
+# print(stats)
+
+# drugi sposob laczenia list naprzemiennie - wynik to list wartosci/str
 # stats = []
 # for i in range(len(list_of_files)):
 #     stats.append(list_of_files[i])
@@ -59,7 +67,6 @@ print(stats)
 # for keys, values in slownik.items():
 #     slownik.update(iter())
 # print(slownik)
-
 
 # podajemy sciezke gdzie ma sie zapisac plik z nazwami plikow / katalogow
 
