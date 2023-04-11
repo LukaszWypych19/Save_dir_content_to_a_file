@@ -24,20 +24,34 @@ print(os.getcwd())
 os.chdir('D:\\Python\\Moje projekty\\Dir_content_in_file\\test_dir')
 print(os.getcwd())
 
+# print(os.stat('test_file_02.txt').st_size)
+
 # printujemy liste plikow i/lub katalogow w danej lokalizacji
 list_of_files = os.listdir()
-print(list_of_files)
+# print(list_of_files)
 
-# tworzymy liste rozmiarow dla poszczegolnych plikow
+# tworzymy liste rozmiarow plikow dla poszczegolnych nazw plikow z listy list_of_files
+# zamieniamy elementy takiej listy na str i dodajemy slowo "Bajtow"
 size_list = []
+# for i in list_of_files:
+#     size = (os.path.getsize(i))
+#     size_list.append(f' Wielkosc pliku: {size} Bajtow')
+# print(size_list)
 for i in list_of_files:
-    size = (os.path.getsize(i))
-    size_list.append(f'{size} Bajtow')
-print(size_list)
+    size_list.append(f'Wielkosc pliku: {os.path.getsize(i)} Bajtow')
+# print(size_list)
+
+# łączymy dwie listy: liste nazw plikow i liste rozmiarow tych plikow
+# w sposob naprzemienny (metoda ZIP) tzn. pierwszy element z listy 'list_of_files'
+# z pierwszym elementem listy 'size_list' itd. --> wynik to lista tupli
 
 stats = list(zip(list_of_files, size_list))
 print(stats)
-
+# stats = []
+# for i in range(len(list_of_files)):
+#     stats.append(list_of_files[i])
+#     stats.append(size_list[i])
+# print(stats)
 
 # keys = list_of_files
 # values = size_list
@@ -45,7 +59,6 @@ print(stats)
 # for keys, values in slownik.items():
 #     slownik.update(iter())
 # print(slownik)
-
 
 
 # podajemy sciezke gdzie ma sie zapisac plik z nazwami plikow / katalogow
