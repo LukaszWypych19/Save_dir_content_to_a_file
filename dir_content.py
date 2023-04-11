@@ -1,4 +1,5 @@
-import os, time
+import os
+import time
 
 #                     wyswietla sciezke katalogu w ktorym jestesmy
 
@@ -40,26 +41,24 @@ list_of_files = os.listdir()
 
 size_list = []
 for i in list_of_files:
-    size_list.append(f'Wielkosc pliku: {os.path.getsize(i)} Bajtow')
-print(size_list)
+    size_list.append(f'Wielkosc pliku: {os.path.getsize(i)} Bajtow,'
+                     f' Data utworzenia pliku: {time.ctime(os.path.getctime(i))}')
+# print(size_list)
 
-create_time_list = []
-for i in list_of_files:
-    create_time_list.append(f'Data utworzenia pliku: {time.ctime(os.path.getctime(i))}')
-print(create_time_list)
+
 # łączymy dwie listy: liste nazw plikow i liste rozmiarow tych plikow
 # w sposob naprzemienny (metoda ZIP) tzn. pierwszy element z listy 'list_of_files'
 # z pierwszym elementem listy 'size_list' itd. --> wynik to lista tupli
 
-stats = list(zip(list_of_files, size_list, create_time_list))
+# stats = list(zip(list_of_files, size_list))
 # print(stats)
 
 # drugi sposob laczenia list naprzemiennie - wynik to list wartosci/str
-# stats = []
-# for i in range(len(list_of_files)):
-#     stats.append(list_of_files[i])
-#     stats.append(size_list[i])
-# print(stats)
+stats = []
+for i in range(len(list_of_files)):
+    stats.append(list_of_files[i])
+    stats.append(size_list[i])
+print(stats)
 
 # keys = list_of_files
 # values = size_list
@@ -77,6 +76,5 @@ for i in stats:
     plik.write(str(i) + '\n')
 
 plik.close()
-
 
 # print(os.walk("d:\\python\\moje projekty\\dir_content_in_file"))

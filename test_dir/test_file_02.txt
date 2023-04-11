@@ -1,5 +1,10 @@
-('CSV_file.csv', 'Wielkosc pliku: 20 Bajtow', 'Data utworzenia pliku: Thu Apr  6 09:13:54 2023')
-('dir_01', 'Wielkosc pliku: 0 Bajtow', 'Data utworzenia pliku: Thu Apr  6 11:09:17 2023')
-('test_file_01.py', 'Wielkosc pliku: 430 Bajtow', 'Data utworzenia pliku: Thu Apr  6 09:13:16 2023')
-('test_file_02.txt', 'Wielkosc pliku: 235 Bajtow', 'Data utworzenia pliku: Thu Apr  6 09:13:29 2023')
-('zapis.json', 'Wielkosc pliku: 69 Bajtow', 'Data utworzenia pliku: Thu Apr  6 14:56:24 2023')
+CSV_file.csv
+Wielkosc pliku: 20 Bajtow, Data utworzenia pliku: Thu Apr  6 09:13:54 2023
+dir_01
+Wielkosc pliku: 0 Bajtow, Data utworzenia pliku: Thu Apr  6 11:09:17 2023
+test_file_01.py
+Wielkosc pliku: 430 Bajtow, Data utworzenia pliku: Thu Apr  6 09:13:16 2023
+test_file_02.txt
+Wielkosc pliku: 450 Bajtow, Data utworzenia pliku: Thu Apr  6 09:13:29 2023
+zapis.json
+Wielkosc pliku: 69 Bajtow, Data utworzenia pliku: Thu Apr  6 14:56:24 2023
