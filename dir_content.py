@@ -69,7 +69,10 @@ print(stats)
 
 # podajemy sciezke gdzie ma sie zapisac plik z nazwami plikow / katalogow
 
-plik = open("D:\\Python\\Moje projekty\\Dir_content_in_file\\test_dir\\test_file_02.txt", 'w+')
+
+# wybor pliku do ktorego maja maja sie zapisywac wybrane dane
+# plik = open("D:\\Python\\Moje projekty\\Dir_content_in_file\\test_dir\\test_file_02.txt", 'w+')
+plik = open("D:\\Python\\Moje projekty\\Dir_content_in_file\\test_dir\\zapis.json", 'w+')
 
 # zapisuje w pliku elementy listy jeden pod drugim
 for i in stats:
